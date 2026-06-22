@@ -1,0 +1,444 @@
+{
+  "stage": "1013R_R0_ART_FIELD_AND_GENERATION_QUALITY_UPGRADE_PLAN",
+  "artifact_type": "art_field_upgrade_matrix",
+  "review_draft_only": true,
+  "formal_apply_performed": false,
+  "database_written": false,
+  "memory_written": false,
+  "vector_index_written": false,
+  "chunks_built": false,
+  "feishu_written": false,
+  "main_project_pushed": false,
+  "R36_modified": false,
+  "foundation_contracts_modified": false,
+  "provider_called": false,
+  "model_called": false,
+  "runtime_connected": false,
+  "formal_frontend_binding_allowed": false,
+  "source_basis_enum": [
+    "teacher_reference",
+    "1013P",
+    "1013M",
+    "1013O",
+    "external_sample",
+    "model_quality_review"
+  ],
+  "field_level_enum": [
+    "required",
+    "recommended",
+    "optional",
+    "forbidden_as_required"
+  ],
+  "source_rules": {
+    "teacher_uploaded_reference_official_claim_allowed": false,
+    "teacher_confirmation_required": true,
+    "external_sample_can_make_required_field": false,
+    "scenario_text_can_be_stable_required_field": false,
+    "scenario_text_examples": [
+      "时光机",
+      "昆虫特工队",
+      "色彩魔法",
+      "建筑勋章",
+      "小小讲解员"
+    ]
+  },
+  "field_groups": {
+    "unit_design": {
+      "purpose": "Upgrade unit design from a lesson list to an art-unit learning spine.",
+      "fields": [
+        {
+          "field": "big_idea",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P"],
+          "reason": "Captures the unit's core understanding without forcing every uploaded case to state it explicitly."
+        },
+        {
+          "field": "basic_question",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P"],
+          "reason": "Supports a through-question that links lesson nodes."
+        },
+        {
+          "field": "performance_task",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P", "external_sample"],
+          "external_sample_may_require": false,
+          "reason": "Names what students finally make, explain, display, guide, or use."
+        },
+        {
+          "field": "lesson_chain",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P", "external_sample"],
+          "external_sample_may_require": false,
+          "reason": "Prevents unit generation from becoming several isolated lessons."
+        },
+        {
+          "field": "exhibition_or_share_endpoint",
+          "level": "optional",
+          "source_basis": ["teacher_reference", "1013P", "external_sample"],
+          "external_sample_may_require": false,
+          "reason": "Useful for closure, but not all units need an exhibition endpoint."
+        },
+        {
+          "field": "student_starting_point",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P"],
+          "reason": "Grounds unit planning in what students can already observe, make, say, or handle."
+        },
+        {
+          "field": "materials_and_tools_overview",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P", "1013M"],
+          "reason": "Art unit planning must surface material/tool constraints early."
+        },
+        {
+          "field": "technique_chain_overview",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013M", "1013O"],
+          "reason": "Connects unit intent to concrete making methods."
+        },
+        {
+          "field": "assessment_evidence",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P", "model_quality_review"],
+          "reason": "Keeps unit quality tied to visible work/process evidence instead of generic goals."
+        },
+        {
+          "field": "reference_case_ids",
+          "level": "recommended",
+          "source_basis": ["1013P"],
+          "reason": "Allows teacher-selected reference cases to guide candidate generation without becoming official evidence."
+        }
+      ]
+    },
+    "lesson_design": {
+      "purpose": "Upgrade lesson design from isolated lesson plans to unit-positioned lessons.",
+      "fields": [
+        {
+          "field": "unit_role",
+          "level": "recommended",
+          "source_basis": ["1013P", "external_sample"],
+          "external_sample_may_require": false,
+          "reason": "States whether the lesson opens, investigates, makes, revises, displays, or reflects."
+        },
+        {
+          "field": "connects_from_previous_lesson",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P", "external_sample"],
+          "external_sample_may_require": false,
+          "reason": "Preserves learning continuity."
+        },
+        {
+          "field": "prepares_for_next_lesson",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P", "external_sample"],
+          "external_sample_may_require": false,
+          "reason": "Prevents the lesson from becoming a terminal standalone activity."
+        },
+        {
+          "field": "student_output_this_lesson",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P", "model_quality_review"],
+          "reason": "Makes the lesson's visible product or evidence inspectable."
+        },
+        {
+          "field": "method_or_technique_focus",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013M", "1013O"],
+          "reason": "Anchors lesson design in art-making method."
+        },
+        {
+          "field": "learning_sheet_need",
+          "level": "optional",
+          "source_basis": ["teacher_reference", "1013P"],
+          "reason": "Useful when a learning sheet exists or is needed; not universal."
+        },
+        {
+          "field": "courseware_screen_need",
+          "level": "optional",
+          "source_basis": ["1013M", "1013O", "model_quality_review"],
+          "reason": "Useful for visual support, but should be generated only when instruction needs it."
+        },
+        {
+          "field": "rubric_link",
+          "level": "recommended",
+          "source_basis": ["1013P", "model_quality_review"],
+          "reason": "Links lesson output to assessment candidates without formal scoring."
+        }
+      ]
+    },
+    "teaching_process": {
+      "purpose": "Upgrade process paragraphs into classroom action blocks.",
+      "fields": [
+        {
+          "field": "phase_name",
+          "level": "recommended",
+          "source_basis": ["1013P", "external_sample"],
+          "external_sample_may_require": false,
+          "reason": "Labels the classroom block for teacher scanning."
+        },
+        {
+          "field": "phase_goal",
+          "level": "recommended",
+          "source_basis": ["external_sample", "model_quality_review"],
+          "external_sample_may_require": false,
+          "reason": "Clarifies the learning purpose of a block, but should not become scenario packaging."
+        },
+        {
+          "field": "teacher_action",
+          "level": "recommended",
+          "source_basis": ["1013P", "1013M"],
+          "reason": "Names what the teacher actually does."
+        },
+        {
+          "field": "student_action",
+          "level": "recommended",
+          "source_basis": ["1013P", "1013M"],
+          "reason": "Names what students observe, discuss, make, revise, or present."
+        },
+        {
+          "field": "teacher_question",
+          "level": "recommended",
+          "source_basis": ["1013P", "external_sample"],
+          "external_sample_may_require": false,
+          "reason": "Keeps inquiry in teacher-usable language."
+        },
+        {
+          "field": "demo_cue",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "Signals what needs demonstration or visual scaffold."
+        },
+        {
+          "field": "materials_or_tools",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013M"],
+          "reason": "Necessary for art-making process quality."
+        },
+        {
+          "field": "technique_step",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013M", "1013O"],
+          "reason": "Turns art-making into visible teachable steps."
+        },
+        {
+          "field": "visual_criteria",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O", "model_quality_review"],
+          "reason": "Helps students judge what they see and make."
+        },
+        {
+          "field": "safety_note",
+          "level": "optional",
+          "source_basis": ["teacher_reference", "1013M"],
+          "reason": "Required only when materials/tools create safety or cleanup needs."
+        },
+        {
+          "field": "student_choice_point",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "Prevents demonstration from becoming copying."
+        },
+        {
+          "field": "screen_or_board_ref",
+          "level": "optional",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "Links instruction to courseware/big-screen only when there is a visual need."
+        },
+        {
+          "field": "observable_evidence",
+          "level": "recommended",
+          "source_basis": ["1013P", "model_quality_review"],
+          "reason": "Makes process quality reviewable."
+        },
+        {
+          "field": "time_hint",
+          "level": "optional",
+          "source_basis": ["external_sample", "model_quality_review"],
+          "external_sample_may_require": false,
+          "reason": "Useful for pacing but not stable enough to require."
+        }
+      ]
+    },
+    "art_demo_block": {
+      "purpose": "Upgrade demonstration into method, visual scaffold, anti-copy, courseware, and assessment links.",
+      "fields": [
+        {
+          "field": "demo_purpose",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "States what student difficulty the demonstration solves."
+        },
+        {
+          "field": "student_gap",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O", "model_quality_review"],
+          "reason": "Prevents a generic demonstration."
+        },
+        {
+          "field": "tools_and_materials",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013M"],
+          "reason": "Makes the demonstration physically teachable."
+        },
+        {
+          "field": "teacher_demo_actions",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "Names concrete teacher moves."
+        },
+        {
+          "field": "student_observation_tasks",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "Makes the demonstration active for students."
+        },
+        {
+          "field": "technique_steps",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013M", "1013O"],
+          "reason": "Core repair from generic demonstration to usable art method."
+        },
+        {
+          "field": "process_mantra",
+          "level": "optional",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "Helpful for children, but not every demonstration needs a slogan."
+        },
+        {
+          "field": "common_mistakes_and_fixes",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "Supports classroom repair and teacher intervention."
+        },
+        {
+          "field": "peer_example_scaffold",
+          "level": "optional",
+          "source_basis": ["1013M"],
+          "reason": "Useful when peer examples are available; not required at intake."
+        },
+        {
+          "field": "anti_copy_guidance",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "Protects originality when showing examples."
+        },
+        {
+          "field": "student_choice_paths",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "Ensures method learning leaves room for student decisions."
+        },
+        {
+          "field": "pre_creation_check",
+          "level": "recommended",
+          "source_basis": ["1013M"],
+          "reason": "Helps students start creation with a short check."
+        },
+        {
+          "field": "courseware_screen_mapping",
+          "level": "optional",
+          "source_basis": ["1013M", "1013O"],
+          "reason": "Useful for screen seeds; not every block needs a new screen."
+        },
+        {
+          "field": "display_preview_mapping",
+          "level": "optional",
+          "source_basis": ["1013O", "model_quality_review"],
+          "reason": "Short big-screen text is separate from lesson prose."
+        },
+        {
+          "field": "assessment_link",
+          "level": "recommended",
+          "source_basis": ["1013M", "1013O", "model_quality_review"],
+          "reason": "Connects demonstration to observable evidence."
+        }
+      ]
+    },
+    "assessment_design": {
+      "purpose": "Upgrade activity rewards into work evidence, process evidence, and task-fit dimensions.",
+      "fields": [
+        {
+          "field": "composition_or_layout",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P"],
+          "reason": "Common across image, design, paper-cutting, and spatial tasks."
+        },
+        {
+          "field": "color_or_material_effect",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013P"],
+          "reason": "Captures visual/material quality without forcing a medium."
+        },
+        {
+          "field": "technique_use",
+          "level": "recommended",
+          "source_basis": ["teacher_reference", "1013M", "1013O"],
+          "reason": "Links rubric to taught methods."
+        },
+        {
+          "field": "creative_expression",
+          "level": "recommended",
+          "source_basis": ["1013M", "model_quality_review"],
+          "reason": "Protects student originality."
+        },
+        {
+          "field": "culture_or_meaning",
+          "level": "optional",
+          "source_basis": ["teacher_reference"],
+          "reason": "Important in traditional-culture cases but not universal."
+        },
+        {
+          "field": "process_participation",
+          "level": "recommended",
+          "source_basis": ["1013P", "model_quality_review"],
+          "reason": "Connects assessment to classroom process."
+        },
+        {
+          "field": "safety_and_cleanliness",
+          "level": "optional",
+          "source_basis": ["teacher_reference", "1013M"],
+          "reason": "Relevant when tools/materials require safety or cleanup."
+        },
+        {
+          "field": "presentation_or_reflection",
+          "level": "optional",
+          "source_basis": ["teacher_reference", "external_sample"],
+          "external_sample_may_require": false,
+          "reason": "Useful when display/share/reflection is part of the task."
+        },
+        {
+          "field": "evidence_type",
+          "level": "recommended",
+          "source_basis": ["1013P", "model_quality_review"],
+          "reason": "Distinguishes work evidence, process evidence, oral evidence, and peer/self review."
+        },
+        {
+          "field": "evidence_source",
+          "level": "recommended",
+          "source_basis": ["1013P", "model_quality_review"],
+          "reason": "Records where evidence comes from without writing formal scores."
+        },
+        {
+          "field": "teacher_observation_note",
+          "level": "optional",
+          "source_basis": ["model_quality_review"],
+          "reason": "Useful for review, but not a formal student profile write."
+        }
+      ]
+    },
+    "forbidden_as_required": {
+      "fields": [
+        "full_unit_body",
+        "complete_lesson_body",
+        "official_curriculum_claim",
+        "formal_scoring_rule",
+        "scenario_text",
+        "activity_reward_label",
+        "external_sample_phrase"
+      ],
+      "reason": "R0 is a field and generation-quality plan, not a formal body generation or official evidence promotion stage."
+    }
+  }
+}
+
