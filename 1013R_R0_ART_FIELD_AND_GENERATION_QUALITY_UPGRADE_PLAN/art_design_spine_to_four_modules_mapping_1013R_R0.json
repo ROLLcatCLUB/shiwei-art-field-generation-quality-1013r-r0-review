@@ -1,0 +1,77 @@
+{
+  "stage": "1013R_R0_ART_FIELD_AND_GENERATION_QUALITY_UPGRADE_PLAN",
+  "artifact_type": "mapping_candidate",
+  "review_draft_only": true,
+  "formal_apply_performed": false,
+  "foundation_contracts_modified": false,
+  "R36_modified": false,
+  "art_design_spine_candidate": {
+    "replaces_existing_modules": false,
+    "generates_formal_body": false,
+    "purpose": "A shared candidate spine that explains the art-teaching chain across the four existing modules."
+  },
+  "spine_sections": [
+    {
+      "section": "textbook_context",
+      "maps_to": ["unit_design", "lesson_design"],
+      "fields": ["textbook_version", "unit_anchor", "lesson_anchor", "anchor_source_type", "official_claim_allowed"],
+      "contract_status": "candidate_mapping_only",
+      "risk": "Teacher-uploaded anchor candidates must not become official claims."
+    },
+    {
+      "section": "unit_understanding",
+      "maps_to": ["unit_design"],
+      "fields": ["big_idea", "basic_question", "student_starting_point", "culture_or_life_context"],
+      "contract_status": "candidate_mapping_only",
+      "risk": "culture_or_life_context is optional and must not be required for all art lessons."
+    },
+    {
+      "section": "unit_task_chain",
+      "maps_to": ["unit_design", "lesson_design"],
+      "fields": ["performance_task", "lesson_chain", "unit_role", "connects_from_previous_lesson", "prepares_for_next_lesson", "student_output_this_lesson", "exhibition_or_share_endpoint"],
+      "contract_status": "candidate_mapping_only",
+      "risk": "Exhibition/share endpoint is optional, not a universal closure."
+    },
+    {
+      "section": "art_making_chain",
+      "maps_to": ["lesson_design", "teaching_process"],
+      "fields": ["materials_and_tools", "technique_steps", "visual_criteria", "safety_notes", "student_choice_points", "anti_copy_guidance"],
+      "contract_status": "candidate_mapping_only",
+      "risk": "Technique chain must remain media-agnostic and cannot force paper/craft structure onto all lessons."
+    },
+    {
+      "section": "support_pack",
+      "maps_to": ["lesson_design", "teaching_process"],
+      "fields": ["learning_sheet", "courseware_screen_draft", "big_screen_short_text", "board_plan", "resource_cards", "classroom_use_guide"],
+      "contract_status": "candidate_mapping_only",
+      "risk": "Support pack should not trigger automatic document generation."
+    },
+    {
+      "section": "assessment_design_link",
+      "maps_to": ["assessment_design", "teaching_process"],
+      "fields": ["rubric_dimensions", "evidence_type", "evidence_source", "teacher_observation_points", "self_peer_teacher_review", "formal_scoring"],
+      "contract_status": "candidate_mapping_only",
+      "risk": "formal_scoring must remain false."
+    },
+    {
+      "section": "review_state",
+      "maps_to": ["unit_design", "lesson_design", "teaching_process", "assessment_design"],
+      "fields": ["teacher_confirmed", "candidate_only", "formal_apply_allowed", "source_type_per_field", "teacher_confirmation_required"],
+      "contract_status": "candidate_mapping_only",
+      "risk": "Review state must be visible in artifacts before any future prompt or UI apply."
+    }
+  ],
+  "module_patch_direction": {
+    "unit_design": "Use spine to require coherence checks, not full body generation.",
+    "lesson_design": "Use spine to inherit unit role and visible student output.",
+    "teaching_process": "Use spine to create classroom action blocks and demo support.",
+    "assessment_design": "Use spine to map evidence and dimensions without scoring."
+  },
+  "next_stage_use": {
+    "preferred_next_stage": "1013R_R1_FIELD_PATCH_AND_PROMPT_PATCH_STATIC_FIXTURE",
+    "R1_formal_apply_allowed": false,
+    "R1_R36_modified_allowed": false,
+    "R1_model_connection_allowed": false
+  }
+}
+
