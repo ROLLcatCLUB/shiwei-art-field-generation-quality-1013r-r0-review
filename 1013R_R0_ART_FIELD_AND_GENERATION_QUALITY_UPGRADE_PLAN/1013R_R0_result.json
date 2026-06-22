@@ -1,0 +1,87 @@
+{
+  "stage": "1013R_R0_ART_FIELD_AND_GENERATION_QUALITY_UPGRADE_PLAN",
+  "status": "PASS",
+  "objective": "Create a review-only plan for art field-system upgrade and generation-quality upgrade based on teacher references, 1013P fields, 1013M demo scaffold, 1013O generation review, and an external sample summary.",
+  "boundary": {
+    "review_draft_only": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "vector_index_written": false,
+    "chunks_built": false,
+    "feishu_written": false,
+    "main_project_pushed": false,
+    "R36_modified": false,
+    "foundation_contracts_modified": false,
+    "provider_called": false,
+    "model_called": false,
+    "runtime_connected": false,
+    "formal_frontend_binding_allowed": false,
+    "full_unit_body_generated": false,
+    "complete_lesson_body_generated": false,
+    "official_claim_from_teacher_reference": false,
+    "external_sample_fields_required": false,
+    "scenario_packaging_as_required_field": false,
+    "prompt_patch_applied": false
+  },
+  "positioning": {
+    "is": ["字段体系升级", "生成质量升级", "review_draft"],
+    "is_not": ["UI主壳升级", "正式模型接入", "R36正式回灌", "知识库入库", "飞象老师网站研究"]
+  },
+  "input_artifacts": [
+    "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013P_R3_ART_FIELD_AND_SPEC_NORMALIZATION_FROM_TEACHER_REFERENCE_CASES/1013P_R3_result.json",
+    "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013M_R0_art_demonstration_and_visual_scaffold_contract/art_demonstration_visual_scaffold_contract_1013M_R0.md",
+    "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013O_R6_art_demo_structured_expression_repair/1013O_R6_report.md",
+    "outputs/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1/1013P_R1_big_unit_wechat_material_scan/1013P_R1_big_unit_wechat_material_scan_report.md"
+  ],
+  "outputs": [
+    "1013R_R0_result.json",
+    "1013R_R0_report.md",
+    "art_field_upgrade_matrix_1013R_R0.json",
+    "art_generation_quality_standard_1013R_R0.md",
+    "prompt_upgrade_recommendations_1013R_R0.md",
+    "external_and_internal_sample_gap_review_1013R_R0.md",
+    "generation_quality_test_case_bank_1013R_R0.json",
+    "art_design_spine_to_four_modules_mapping_1013R_R0.json",
+    "teacher_review_checklist_1013R_R0.md",
+    "validate_1013R_R0_art_field_and_generation_quality_upgrade.py"
+  ],
+  "quality_label_categories": {
+    "unit_design": ["UNIT_AS_LESSON_LIST", "NO_BIG_IDEA", "NO_BASIC_QUESTION", "NO_PERFORMANCE_TASK", "LESSON_CHAIN_WEAK", "NO_EXHIBITION_ENDPOINT", "GENERIC_UNIT_GOALS"],
+    "lesson_design": ["LESSON_ISOLATED_FROM_UNIT", "NO_UNIT_ROLE", "NO_STUDENT_OUTPUT", "GENERIC_PROCESS", "MATERIAL_TECHNIQUE_NOT_IN_ACTIVITY"],
+    "teaching_process": ["PROCESS_AS_PARAGRAPH", "NO_TEACHER_ACTION", "NO_STUDENT_ACTION", "NO_OBSERVABLE_EVIDENCE", "NO_VISUAL_TASK"],
+    "art_demo_block": ["GENERIC_DEMO", "NO_STUDENT_GAP", "NO_TECHNIQUE", "NO_MANTRA", "NO_MISTAKE_FIX", "NO_PEER_SCAFFOLD", "COPY_RISK", "NO_STUDENT_CHOICE", "TOO_TEXT_HEAVY", "COURSEWARE_IS_LESSON_TEXT"],
+    "assessment_design": ["ASSESSMENT_AS_REWARD_ONLY", "NO_WORK_EVIDENCE", "NO_PROCESS_EVIDENCE", "GENERIC_RUBRIC", "FORMAL_SCORE_RISK"]
+  },
+  "prompt_upgrade_recommendations": {
+    "material_intake_prompt_patch": "recommendation_only",
+    "unit_design_prompt_patch": "recommendation_only",
+    "lesson_design_prompt_patch": "recommendation_only",
+    "teaching_process_and_demo_prompt_patch": "recommendation_only",
+    "assessment_prompt_patch": "recommendation_only",
+    "prompt_patch_applied": false
+  },
+  "test_case_bank": {
+    "case_count": 5,
+    "covers": [
+      "architecture_and_space_unit",
+      "color_lesson",
+      "material_technique_lesson",
+      "traditional_culture_expression",
+      "design_application"
+    ]
+  },
+  "preferred_next_stage": "1013R_R1_FIELD_PATCH_AND_PROMPT_PATCH_STATIC_FIXTURE",
+  "next_stage_constraints": {
+    "formal_apply_allowed": false,
+    "R36_modified_allowed": false,
+    "model_connection_allowed": false,
+    "provider_call_allowed": false,
+    "fixture_only": true
+  },
+  "validator": {
+    "path": "validate_1013R_R0_art_field_and_generation_quality_upgrade.py",
+    "expected_status": "PASS",
+    "last_run_status": "PASS"
+  }
+}
