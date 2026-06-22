@@ -1,0 +1,83 @@
+{
+  "stage": "1013R_R0_ART_FIELD_AND_GENERATION_QUALITY_UPGRADE_PLAN",
+  "artifact_type": "generation_quality_test_case_bank",
+  "review_draft_only": true,
+  "formal_apply_performed": false,
+  "provider_called": false,
+  "model_called": false,
+  "test_case_count": 5,
+  "test_cases": [
+    {
+      "case_id": "1013R_R0_case_architecture_home_unit",
+      "grade": "中高年级待确认",
+      "topic": "理想建筑与温暖家园",
+      "lesson_or_unit_type": "unit",
+      "lesson_sequence": ["老房子", "我造的小房子", "漂亮的房间"],
+      "expected_big_idea": "建筑与空间表达承载生活记忆、创造想象和居住美化。",
+      "expected_student_output": "从观察老房子到设计小房子，再到美化房间的连续作品或空间设计方案。",
+      "expected_materials": ["图片资料", "绘画材料", "纸材或模型材料", "空间设计参考"],
+      "expected_technique_chain": ["观察建筑特征", "概括空间结构", "设计造型", "装饰美化", "展示说明"],
+      "expected_demo_need": "需要展示从真实建筑特征到个人空间设计的转化方法。",
+      "expected_assessment_evidence": ["空间结构表达", "设计创意", "材料/色彩效果", "展示说明", "过程草图"],
+      "expected_courseware_screen_types": ["unit_chain_screen", "architecture_observation_screen", "design_step_screen", "before_after_room_screen", "display_reflection_screen"],
+      "known_risks": ["external_sample_official_claim_risk", "scenario_packaging_heavy", "assessment_as_reward_only", "technique_demo_not_expanded"]
+    },
+    {
+      "case_id": "1013R_R0_case_color_contrast_harmony",
+      "grade": "三至四年级待确认",
+      "topic": "色彩的对比与和谐",
+      "lesson_or_unit_type": "lesson_or_unit",
+      "expected_big_idea": "色彩关系可以表达感觉、秩序和画面情绪。",
+      "expected_student_output": "完成一张能说明对比或和谐色彩关系的视觉作品或色彩小样。",
+      "expected_materials": ["水彩笔", "油画棒", "色卡", "试色纸"],
+      "expected_technique_chain": ["说感觉", "选主色", "找辅助色", "摆大色块", "调整局部"],
+      "expected_demo_need": "需要演示如何从感觉词选择主色并控制颜色数量。",
+      "expected_assessment_evidence": ["能说出选色理由", "画面有主色关系", "能避免颜色过乱", "能根据同伴反馈调整"],
+      "expected_courseware_screen_types": ["feeling_word_color_screen", "main_color_choice_screen", "mistake_comparison_screen", "pre_creation_check_screen"],
+      "known_risks": ["generic_demo", "courseware_is_lesson_text", "no_student_choice", "generic_rubric"]
+    },
+    {
+      "case_id": "1013R_R0_case_material_technique_paper_roll_cut",
+      "grade": "四年级 / 第二学段",
+      "topic": "纸卷 / 剪纸 / 综合材料",
+      "lesson_or_unit_type": "material_technique_lesson",
+      "expected_big_idea": "材料的形态变化能带来新的视觉表达和创意空间。",
+      "expected_student_output": "用纸卷、剪纸或综合材料完成一个有结构和细节的作品。",
+      "expected_materials": ["纸", "剪刀", "胶水", "彩纸", "废旧材料", "装饰材料"],
+      "expected_technique_chain": ["卷", "剪", "折", "贴", "组合", "装饰", "整理"],
+      "expected_demo_need": "需要演示材料如何从平面变成立体或镂空效果，并提示安全与桌面整理。",
+      "expected_assessment_evidence": ["技法使用", "结构稳定", "外形适合", "细节丰富", "安全整洁"],
+      "expected_courseware_screen_types": ["material_transformation_screen", "step_sequence_screen", "safety_cleanup_screen", "peer_example_screen"],
+      "known_risks": ["technique_chain_missing", "safety_note_missing", "copy_risk", "formal_score_risk"]
+    },
+    {
+      "case_id": "1013R_R0_case_qinglv_china_color",
+      "grade": "三年级待确认",
+      "topic": "青绿中国色 / 千里江山图相关单元",
+      "lesson_or_unit_type": "traditional_culture_and_expression",
+      "expected_big_idea": "传统色彩与长卷构图能帮助学生理解中国画的视觉秩序和情感表达。",
+      "expected_student_output": "完成一段青绿色彩练习、长卷取景小稿或青绿主题作品。",
+      "expected_materials": ["图片参考", "线稿", "色卡", "水彩或国画色", "长卷纸"],
+      "expected_technique_chain": ["观察青绿关系", "识别主色", "长卷取景", "分层设色", "展示说明"],
+      "expected_demo_need": "需要示范长卷取景、主色选择和色彩层次，而不是只介绍名画。",
+      "expected_assessment_evidence": ["能识别青绿色彩", "能组织长卷空间", "能说明色彩感觉", "能借鉴方法不照抄"],
+      "expected_courseware_screen_types": ["artwork_observation_screen", "color_relation_screen", "scroll_composition_screen", "method_not_copy_screen"],
+      "known_risks": ["culture_context_overrequired", "lesson_becomes_art_history_only", "no_visual_task", "generic_unit_goals"]
+    },
+    {
+      "case_id": "1013R_R0_case_design_application_phone_case_or_bag",
+      "grade": "中年级待确认",
+      "topic": "手机壳 / 包的世界",
+      "lesson_or_unit_type": "design_application_lesson",
+      "expected_big_idea": "设计要回应使用者、功能、审美和表达需要。",
+      "expected_student_output": "完成一个手机壳或包的图案/结构设计方案，并说明适合谁使用。",
+      "expected_materials": ["设计草图纸", "彩笔", "模板", "生活物品图片", "装饰材料"],
+      "expected_technique_chain": ["观察使用需求", "确定对象", "选择图案/结构", "草图迭代", "展示说明"],
+      "expected_demo_need": "需要示范如何从使用者需求转化为图案、结构或装饰选择。",
+      "expected_assessment_evidence": ["功能与对象匹配", "图案/结构合理", "创意表达", "说明清楚", "修改痕迹"],
+      "expected_courseware_screen_types": ["user_need_screen", "design_choice_screen", "draft_iteration_screen", "presentation_check_screen"],
+      "known_risks": ["task_as_decoration_only", "no_user_need", "no_student_output", "generic_rubric"]
+    }
+  ]
+}
+
